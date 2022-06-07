@@ -1,9 +1,13 @@
-allow_embedding: false
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: home}
 package_name: Medium_Demo
-db_schema: {}
+allow_embedding: false
 name: Medium Demo
-startup_form: Form1
-renamed: true
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-services: []
+startup_form: null
+db_schema: {}
+renamed: true
