@@ -4,5 +4,6 @@ db_schema: {}
 name: Medium Demo
 startup_form: Form1
 renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
 services: []
