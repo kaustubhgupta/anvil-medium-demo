@@ -2,6 +2,9 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
 startup: {type: form, module: home}
 package_name: Medium_Demo
 allow_embedding: false
@@ -10,4 +13,8 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 startup_form: null
 db_schema: {}
+secrets:
+  GITHUB_API_KEY:
+    value: {? '' : Ytq+GnmQ0CTwGvVAhqAuYPV94DqzrHQhljDzGoa5Pevu6D9GNf/S88L8xUyxR4Sg7ae5ERF6ihuOfM5kWqZqIXRkc9sRNpIFUF6u822q/MNtlXtp5FQ7nYtQ/WmxSr5Txgdi14Ne/0A6vgwLrmJcicZhWczIB6fn1gvgCVEH/3nlLgHfE6ud}
+    type: secret
 renamed: true
