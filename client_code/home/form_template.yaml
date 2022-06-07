@@ -25,6 +25,10 @@ components:
     layout_properties: {grid_position: 'TRAJME,RQFOKP'}
     data_bindings: []
     event_bindings: {click: username_submit_click}
+  - type: Plot
+    properties: {}
+    name: commits_bar_graph
+    layout_properties: {grid_position: 'AJRCXZ,OMHVOO'}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: github profile visualizer, font_size: null, wrap_on: mobile,

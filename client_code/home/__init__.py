@@ -12,10 +12,11 @@ class home(homeTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    
 
   def username_submit_click(self, **event_args):
     """This method is called when the button is clicked"""
     username = self.username_input.text
     Notification(username).show()
+    
+    
 
