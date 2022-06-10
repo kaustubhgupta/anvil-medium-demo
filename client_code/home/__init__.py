@@ -15,8 +15,11 @@ class home(homeTemplate):
 
   def username_submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-    username = self.username_input.text
+    username = str(self.username_input.text)
+    data = anvil.server.call('fetchStats', username)
+    print(data)
     Notification(username).show()
+
     
     
 
