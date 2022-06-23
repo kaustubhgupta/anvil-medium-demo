@@ -38,47 +38,6 @@ def fetchStats(username: str):
           }
         }
       },
-      
-      query userInfo($username: String!) {
-      user(login: $username) {
-        name
-        login
-        contributionsCollection {
-          totalCommitContributions
-          restrictedContributionsCount
-        }
-        repositoriesContributedTo(
-          first: 1
-          contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
-        ) {
-          totalCount
-        }
-        pullRequests(first: 1) {
-          totalCount
-        }
-        openIssues: issues(states: OPEN) {
-          totalCount
-        }
-        closedIssues: issues(states: CLOSED) {
-          totalCount
-        }
-        followers {
-          totalCount
-        }
-        repositories(
-          first: 100
-          ownerAffiliations: OWNER
-          orderBy: {direction: DESC, field: STARGAZERS}
-        ) {
-          totalCount
-          nodes {
-            stargazers {
-              totalCount
-            }
-          }
-        }
-      }
-    }
     """
   }
   
@@ -144,4 +103,4 @@ def fetchStats(username: str):
         )
   language_data = r1.json()
   general_data = r2.json()
-  return general_data
+  return (general_data, language_data)
