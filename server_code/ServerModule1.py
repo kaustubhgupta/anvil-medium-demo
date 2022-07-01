@@ -15,6 +15,42 @@ API_KEY = anvil.secrets.get_secret('GITHUB_API_KEY')
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
+
+def getCleanedUserData(data: dict) -> dict:
+    
+    root = data['data']['user']
+    cleanedData = {}
+    cleanedData['name'] = root.get('name')
+    cleanedData['totalCommits'] = int(root['contributionsCollection']['totalCommitContributions']) + int(root['contributionsCollection']['restrictedContributionsCount'])
+    cleanedData['repositoriesContributedTo'] = root['repositoriesContributedTo']['totalCount']
+    cleanedData['pullRequests'] = root['pullRequests']['totalCount']
+    cleanedData['openIssues'] = root['openIssues']['totalCount']
+    cleanedData['closedIssues'] = root['closedIssues']['totalCount']
+    cleanedData['followers'] = root['followers']['totalCount']
+    cleanedData['following'] = root['following']['totalCount']
+    cleanedData['totalRepos'] = root['repositories']['totalCount']
+    cleanedData['totalStars'] = sum([i['stargazers']['totalCount'] for i in root['repositories']['nodes']])
+    cleanedData['photoURL'] = root['avatarUrl']
+    cleanedData['profileBio'] = root['bio']
+    cleanedData['location'] = root['location']
+    cleanedData['twitterUsername'] = root['twitterUsername']
+
+    return cleanedData
+  
+def getLanguageCounter(data: dict) -> dict:
+    
+    languageCounter = {}
+    for i in data['data']['user']['repositories']['nodes']:
+        langs = i['languages']['edges']
+        if len(langs)!=0:
+            for i in langs:
+                if i['node']['name'] in languageCounter.keys():
+                    languageCounter[i['node']['name']] += 1
+                else:
+                    languageCounter[i['node']['name']] = 1
+
+    return languageCounter
+  
 @anvil.server.callable
 def fetchStats(username: str) -> tuple:
     
@@ -112,7 +148,7 @@ def fetchStats(username: str) -> tuple:
     
     )
     
-    language_data = r1.json()
-    general_data = r2.json()
+    language_data = getLanguageCounter(r1.json())
+    general_data = getCleanedUserData(r2.json())
     
     return (general_data, language_data)

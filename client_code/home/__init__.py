@@ -16,10 +16,15 @@ class home(homeTemplate):
   def username_submit_click(self, **event_args):
     """This method is called when the button is clicked"""
     username = str(self.username_input.text)
-    data = anvil.server.call('fetchStats', username)
-    print(data)
-    Notification(username).show()
-
-    
-    
-
+    general_data, language_data = anvil.server.call('fetchStats', username)
+    self.avatarImage.source = general_data['photoURL']
+    self.name.text = general_data['name']
+    self.bio.text = general_data['profileBio']
+    self.languagePlot.data = go.Pie(labels=list(language_data.keys()),
+                             values=list(language_data.values()),
+                             textinfo='label+percent',
+                             title='Language Used'
+                             )
+    self.languagePlot.layout.template = 'plotly_dark'
+    self.languagePlot.layout.autosize = True
+    self.languagePlot.layout.font.size = 15
