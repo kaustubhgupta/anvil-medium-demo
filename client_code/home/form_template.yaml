@@ -5,7 +5,7 @@ container:
   data_bindings: []
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"AQXTGW":30,"JQLRYZ":30,"IXMSIF":25}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -26,7 +26,7 @@ components:
     data_bindings: []
     event_bindings: {click: username_submit_click}
   - type: Image
-    properties: {role: null, vertical_align: top, height: '200', tooltip: '', border: '',
+    properties: {role: null, vertical_align: top, height: 211, tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: avatarImage
@@ -43,6 +43,20 @@ components:
       icon: ''}
     name: bio
     layout_properties: {grid_position: 'UMZEWC,JQLRYZ INPLSW,JHEXQG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: true, background: '', bold: false, underline: false,
+      icon: ''}
+    name: location
+    layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,IXMSIF'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: true, background: '', bold: false, underline: false,
+      icon: ''}
+    name: twitter
+    layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,QEXNXX'}
   - type: Plot
     properties: {spacing_above: small, spacing_below: small, height: 440.5999984741211,
       visible: true, tooltip: '', interactive: true}

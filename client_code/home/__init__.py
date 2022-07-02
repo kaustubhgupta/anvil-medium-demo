@@ -20,11 +20,12 @@ class home(homeTemplate):
     self.avatarImage.source = general_data['photoURL']
     self.name.text = general_data['name']
     self.bio.text = general_data['profileBio']
+    self.location.icon = "fa:map-pin"
+    self.location.text = general_data['location']
+    self.twitter.icon = "fa:twitter"
+    self.twitter.text = '@' + general_data['twitterUsername']
     self.languagePlot.data = go.Pie(labels=list(language_data.keys()),
                              values=list(language_data.values()),
                              textinfo='label+percent',
                              title='Language Used'
                              )
-    self.languagePlot.layout.template = 'plotly_dark'
-    self.languagePlot.layout.autosize = True
-    self.languagePlot.layout.font.size = 15
