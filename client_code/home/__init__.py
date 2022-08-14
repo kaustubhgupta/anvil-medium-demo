@@ -37,7 +37,10 @@ class home(homeTemplate):
     else:
       self.location.text = home.NA
     self.twitter.icon = "fa:twitter"
-    self.twitter.text = '@' + general_data['twitterUsername']
+    if general_data['twitterUsername']:
+      self.twitter.text = '@' + general_data['twitterUsername']
+    else:
+      self.twitter.text = home.NA
     self.languagePlot.data = go.Pie(labels=list(language_data.keys()),
                              values=list(language_data.values()),
                              textinfo='label+percent',
