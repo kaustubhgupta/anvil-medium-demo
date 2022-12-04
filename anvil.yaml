@@ -17,6 +17,6 @@ startup_form: null
 db_schema: {}
 secrets:
   GITHUB_API_KEY:
-    value: {? '' : Ytq+GnmQ0CTwGvVAhqAuYPV94DqzrHQhljDzGoa5Pevu6D9GNf/S88L8xUyxR4Sg7ae5ERF6ihuOfM5kWqZqIXRkc9sRNpIFUF6u822q/MNtlXtp5FQ7nYtQ/WmxSr5Txgdi14Ne/0A6vgwLrmJcicZhWczIB6fn1gvgCVEH/3nlLgHfE6ud}
+    value: {? '' : rh9dfvHw1kDSapQtfACvomT4z+5MLH/Q3YH1nDKiVHjJxE5rkaVgFN+9xkmHKxiCbmsj1N11WBY8EQFBrkFoVL6chNWaFS4ssBq4LMge1wLH0QsPy0dtaPmID75EUuRan6n/v64+qgJK+dQVzRJcjcIC0RgsG6H2ztoJtNrgjQ2VvtoWkqU+}
     type: secret
 renamed: true
