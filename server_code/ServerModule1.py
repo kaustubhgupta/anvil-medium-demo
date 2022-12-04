@@ -147,8 +147,7 @@ def fetchStats(username: str) -> tuple:
                 timeout=15,
     
     )
-    
-    print(r1.json(), r2.json())
+  
     language_data = getLanguageCounter(r1.json())
     general_data = getCleanedUserData(r2.json())
     return (general_data, language_data)
