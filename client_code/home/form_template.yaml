@@ -1,50 +1,50 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:dashboard.html'}
-  data_bindings: []
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{"AQXTGW":30,"JQLRYZ":30,"IXMSIF":25}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter GitHub Username, border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
+- components:
+  - layout_properties: {grid_position: 'MLPFXN,PGUKSO'}
     name: username_input
-    layout_properties: {grid_position: 'MLPFXN,PGUKSO'}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent 1', bold: false, underline: false, icon: ''}
-    name: username_submit
-    layout_properties: {grid_position: 'TRAJME,RQFOKP'}
-    data_bindings: []
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: Enter GitHub Username, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - data_bindings: []
     event_bindings: {click: username_submit_click}
-  - type: Image
-    properties: {role: null, vertical_align: top, height: 211, tooltip: '', border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small, source: '', spacing_below: small, background: '', horizontal_align: left}
-    name: avatarImage
+    layout_properties: {grid_position: 'TRAJME,RQFOKP'}
+    name: username_submit
+    properties: {align: center, background: 'theme:Accent 1', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Submit, tooltip: '', underline: false, visible: true}
+    type: Button
+  - event_bindings: {}
     layout_properties: {grid_position: 'UMZEWC,AQXTGW'}
-    event_bindings: {}
-  - type: Label
-    properties: {}
+    name: avatarImage
+    properties: {background: '', border: '', display_mode: shrink_to_fit, foreground: '', height: 211, horizontal_align: left, role: null, source: '', spacing_above: small, spacing_below: small, tooltip: '', vertical_align: top, visible: true}
+    type: Image
+  - layout_properties: {grid_position: 'UMZEWC,JQLRYZ IKAHYF,JIBAAZ'}
     name: name
-    layout_properties: {grid_position: 'UMZEWC,JQLRYZ IKAHYF,JIBAAZ'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: true, background: '', bold: false, underline: false, icon: ''}
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'UMZEWC,JQLRYZ INPLSW,JHEXQG'}
     name: bio
-    layout_properties: {grid_position: 'UMZEWC,JQLRYZ INPLSW,JHEXQG'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: true, background: '', bold: false, underline: false, icon: ''}
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: true, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,IXMSIF'}
     name: location
-    layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,IXMSIF'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: true, background: '', bold: false, underline: false, icon: ''}
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: true, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,QEXNXX'}
     name: twitter
-    layout_properties: {grid_position: 'UMZEWC,JQLRYZ MAXCGR,QEXNXX'}
-  - type: Plot
-    properties: {spacing_above: small, spacing_below: small, height: 440.5999984741211, visible: true, tooltip: '', interactive: true}
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: true, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'OQAQTC,OMSKWT'}
     name: languagePlot
-    layout_properties: {grid_position: 'OQAQTC,OMSKWT'}
-- type: Link
-  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '', visible: true, text: github profile visualizer, font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:bolt'}
+    properties: {height: 440.5999984741211, interactive: true, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+    type: Plot
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{"AQXTGW":30,"JQLRYZ":30,"IXMSIF":25}'}
+  type: ColumnPanel
+- layout_properties: {slot: title}
   name: title
-  layout_properties: {slot: title}
+  properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:bolt', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: github profile visualizer, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+  type: Link
+container:
+  data_bindings: []
+  properties: {html: '@theme:dashboard.html'}
+  type: HtmlTemplate
+is_package: true

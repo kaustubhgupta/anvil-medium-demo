@@ -1,21 +1,21 @@
-scheduled_tasks: []
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/secrets.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: home}
-package_name: Medium_Demo
-allow_embedding: false
-name: Medium Demo
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox, server_spec: null}
-metadata: {}
-startup_form: null
+allow_embedding: true
 db_schema: {}
+metadata: {}
+name: Medium Demo
+package_name: Medium_Demo
+renamed: true
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
+scheduled_tasks: []
 secrets:
   GITHUB_API_KEY:
-    value: {? '' : rh9dfvHw1kDSapQtfACvomT4z+5MLH/Q3YH1nDKiVHjJxE5rkaVgFN+9xkmHKxiCbmsj1N11WBY8EQFBrkFoVL6chNWaFS4ssBq4LMge1wLH0QsPy0dtaPmID75EUuRan6n/v64+qgJK+dQVzRJcjcIC0RgsG6H2ztoJtNrgjQ2VvtoWkqU+, CHLGCDT4DY3ADFOQ: QhQ4QddBvm2QsMxmLoNs4TufeqM1ymJeze/8Pr1EyZy73FtJsIQShfkBH5+bBAANvExwtVV8yUbZzQJJ+nE454EfrUzvNtJp5uF+qcVZrDx48mQdM4pGYzMqqXECQCSVEq4yFRvNDuZ7R0yOQI3PrRqlWDacaMuv3w0U5LFiXOb4lnpcHzSF}
     type: secret
-renamed: true
+    value: {? '' : rh9dfvHw1kDSapQtfACvomT4z+5MLH/Q3YH1nDKiVHjJxE5rkaVgFN+9xkmHKxiCbmsj1N11WBY8EQFBrkFoVL6chNWaFS4ssBq4LMge1wLH0QsPy0dtaPmID75EUuRan6n/v64+qgJK+dQVzRJcjcIC0RgsG6H2ztoJtNrgjQ2VvtoWkqU+, CHLGCDT4DY3ADFOQ: QhQ4QddBvm2QsMxmLoNs4TufeqM1ymJeze/8Pr1EyZy73FtJsIQShfkBH5+bBAANvExwtVV8yUbZzQJJ+nE454EfrUzvNtJp5uF+qcVZrDx48mQdM4pGYzMqqXECQCSVEq4yFRvNDuZ7R0yOQI3PrRqlWDacaMuv3w0U5LFiXOb4lnpcHzSF}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
+startup: {module: home, type: form}
+startup_form: null
