@@ -1,6 +1,8 @@
 components:
 - components:
-  - event_bindings: {pressed_enter: username_input_pressed_enter}
+  - data_bindings:
+    - {code: 'self.item['''']', property: enabled, writeback: false}
+    event_bindings: {pressed_enter: username_input_pressed_enter, show: username_input_show}
     layout_properties: {grid_position: 'MLPFXN,PGUKSO'}
     name: username_input
     properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: Enter GitHub Username, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
