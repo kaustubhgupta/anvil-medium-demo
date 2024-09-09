@@ -1,9 +1,6 @@
 from ._anvil_designer import homeTemplate
 from anvil import *
 import plotly.graph_objects as go
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.server
 
 class home(homeTemplate):
