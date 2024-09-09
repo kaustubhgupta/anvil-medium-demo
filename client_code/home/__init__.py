@@ -46,5 +46,3 @@ class home(homeTemplate):
                              textinfo='label+percent',
                              title='Language Used'
                              )
-
-
