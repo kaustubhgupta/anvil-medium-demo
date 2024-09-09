@@ -4,6 +4,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import requests
+import datetime
 
 s = requests.session()
 API_KEY = anvil.secrets.get_secret('GITHUB_API_KEY')
@@ -150,4 +151,5 @@ def fetchStats(username: str) -> tuple:
   
     language_data = getLanguageCounter(r1.json())
     general_data = getCleanedUserData(r2.json())
+    app_tables.userinfo.add_row(lastFetched=datetime.datetime.now(), username=username)
     return (general_data, language_data)
