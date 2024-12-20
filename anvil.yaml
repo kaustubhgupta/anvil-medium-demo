@@ -20,7 +20,7 @@ scheduled_tasks: []
 secrets:
   GITHUB_API_KEY:
     type: secret
-    value: {? '' : rh9dfvHw1kDSapQtfACvomT4z+5MLH/Q3YH1nDKiVHjJxE5rkaVgFN+9xkmHKxiCbmsj1N11WBY8EQFBrkFoVL6chNWaFS4ssBq4LMge1wLH0QsPy0dtaPmID75EUuRan6n/v64+qgJK+dQVzRJcjcIC0RgsG6H2ztoJtNrgjQ2VvtoWkqU+, CHLGCDT4DY3ADFOQ: uTaArgEdaEVcFiKKf/FFF/5Y6fv37oeWIHZ3JcEKNW1vRE6yxiiGFqLuX0I1cgJumcTVttLvsQF3FxIwROv37xxHUvwrUKVbvmLsRNXkUk40G1ITCEz53wP8UeF8PStoERh2ADpgLdjS8GnTjQPPP7P5TeoUMTpuP4CbmbxgE78Csok9T5qx}
+    value: {? '' : rh9dfvHw1kDSapQtfACvomT4z+5MLH/Q3YH1nDKiVHjJxE5rkaVgFN+9xkmHKxiCbmsj1N11WBY8EQFBrkFoVL6chNWaFS4ssBq4LMge1wLH0QsPy0dtaPmID75EUuRan6n/v64+qgJK+dQVzRJcjcIC0RgsG6H2ztoJtNrgjQ2VvtoWkqU+, CHLGCDT4DY3ADFOQ: bU8U4n99foBFR1ogLqxmviyNX9ot/o575FENsGhtFEZSyOkU8dtG6rvBUTRjaPBCcyoh03WCJF2PKgPDmtm7JRNxa0dw7UouDqKPHhxk+Z+vzRutcTqB3MOZQnRgHboWj23SN3H03egVDUCuPb8zgcCyKWVmYtuWajD9ufFCuFv2XR0AC8O8}
 services:
 - client_config: {}
   server_config: {}
